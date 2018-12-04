@@ -1,5 +1,4 @@
 class Campaign < ApplicationRecord
-    validates :title, presence: true
-    validates :description, presence: true
-    validates :amount_raised, presence: true
+    validates_presence_of :title, :description, :amount_raised
+    
 end

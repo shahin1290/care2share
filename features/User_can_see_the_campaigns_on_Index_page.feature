@@ -9,7 +9,8 @@ Feature: User can see the campaigns on index page
         | title        | description                      | amount_raised |
         |Brain surgery | I grew up always helping others. | 1000.00       |
      
-        When I visit the site
+        And I visit the site
         Then I should see "Brain surgery"
         And I should see "I grew up always helping others."
         And I should see "1000"
+        And show me the page
