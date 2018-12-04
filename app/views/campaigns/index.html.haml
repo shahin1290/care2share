@@ -1,1 +1,5 @@
 %h1 List of Campaigns
+- @campaigns.each do |campaign|
+    %p= campaign.title
+    %p= campaign.description
+    %p= campaign.amount_raised

@@ -6,8 +6,8 @@ Feature: User can see the campaigns on index page
     
     Scenario: User can see the campaigns on index page
         Given the following campaigns exists
-        | title        | description                      | Amount_Raised |
-        |Brain surgery | I grew up always helping others. | 1000          |
+        | title        | description                      | amount_raised |
+        |Brain surgery | I grew up always helping others. | 1000.00       |
      
         When I visit the site
         Then I should see "Brain surgery"
