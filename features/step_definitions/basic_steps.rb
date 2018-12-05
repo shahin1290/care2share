@@ -12,10 +12,6 @@ When('I fill in {string} field with {string}') do |field, input|
     fill_in field, with: input
 end
 
-Then('I should see {string}') do |string|
-pending # Write code here that turns the phrase above into concrete actions
-end
-
 When("I visit the site") do
     visit root_path
 end
