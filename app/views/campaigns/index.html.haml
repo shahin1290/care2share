@@ -1,3 +1,15 @@
+- if user_signed_in?
+    -# - if current_user.restaurant_owner?
+    %p= "Hello, #{current_user.firstname}, you are the boss!"
+    -#     %p= link_to 'Add Dish', new_dish_path
+    -# - else
+    -#     %p= "Hello, #{current_user.name}"
+    %p= link_to 'Log out', destroy_user_session_path, method: :delete
+    
+- else
+    %p= link_to 'Sign up', new_user_registration_path
+    %p= link_to 'Log in', new_user_session_path
+
 %h1 List of Campaigns
 - @campaigns.each do |campaign|
     %p= campaign.title
