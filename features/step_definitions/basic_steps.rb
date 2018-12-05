@@ -4,10 +4,6 @@ Given('the following user exists') do |table|
     end
 end
 
-Given('I visit the page') do
-pending # Write code here that turns the phrase above into concrete actions
-end
-
 Given('I click {string}') do |string|
 pending # Write code here that turns the phrase above into concrete actions
 end
@@ -22,4 +18,11 @@ end
 
 Then('I should see {string}') do |string|
 pending # Write code here that turns the phrase above into concrete actions
+end
+When("I visit the site") do
+    visit root_path
+end
+
+Given('show me the page') do
+    save_and_open_page
 end
