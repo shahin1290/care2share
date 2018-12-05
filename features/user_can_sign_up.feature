@@ -5,8 +5,8 @@ Feature: User can sign up
 
     Background: 
         Given the following user exists
-        | name      | address      | phone   | email          | password | password_confirmation |
-        | Hanna     | 111 lakeview | 123456  | hanna@tuna.se  | password | password              |
+        | firstname | lastname | email         | password | password_confirmation |
+        | Hanna     | Nyman    | hanna@tuna.se | password | password              |
         And I visit the page
         And I click 'Sign up'
 
