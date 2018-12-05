@@ -1,8 +1,8 @@
 = form_with scope: :campaign, url: campaigns_path do |form|
     %p
-        = form.label :amount
+        = form.label :goal
         %br/
-        = form.text_field :amount
+        = form.text_field :goal
     %p
         = form.label :Company_name
         %br/
@@ -24,9 +24,6 @@
         %br/
         = form.text_area :description
     %p
-        = form.label :amount_raised
-        %br/
-        = form.text_field :amount_raised
     
     %p
         = form.submit
