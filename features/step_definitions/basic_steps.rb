@@ -1,12 +1,12 @@
-When("I visit the site") do
+When('I visit the site') do
     visit root_path
 end
 
-When("I click {string}") do |value|
+When('I click {string}') do |value|
    click_on value
 end
 
-When("I fill in {string} with {string}") do |field, input|
+When('I fill in {string} with {string}') do |field, input|
     fill_in field, with: input
 end
   
