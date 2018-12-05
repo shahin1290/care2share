@@ -1,28 +1,32 @@
 = form_with scope: :campaign, url: campaigns_path do |form|
     %p
-        = form.label :Amount
+        = form.label :amount
         %br/
-        = form.text_field :Amount
+        = form.text_field :amount
     %p
-        = form.label :Companyname
+        = form.label :Company_name
         %br/
-        = form.text_field :Companyname
+        = form.text_field :Company_name
     %p
-        = form.label :'Postalcode'
+        = form.label :Postal_code
         %br/
-        = form.text_field :Postalcode
+        = form.text_field :Postal_code
     %p
-        = form.label :'Category'
+        = form.label :Category
         %br/
         = form.text_field :Category
     %p
-        = form.label :'Title'
+        = form.label :title
         %br/
-        = form.text_field :Title
+        = form.text_field :title
     %p
-        = form.label :'Tellstory'
+        = form.label :description
         %br/
-        = form.text_field :Tellstory
+        = form.text_area :description
+    %p
+        = form.label :amount_raised
+        %br/
+        = form.text_field :amount_raised
     
     %p
         = form.submit

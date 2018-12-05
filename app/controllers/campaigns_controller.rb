@@ -8,7 +8,7 @@ class CampaignsController < ApplicationController
   end
 
   def create
-    @campaign = Campaign.new(params.require(:campaign).permit(:title))
+    @campaign = Campaign.new(params.require(:campaign).permit(:title, :description, :amount_raised))
  
     @campaign.save
     redirect_to campaigns_path
