@@ -7,17 +7,17 @@ Feature: User can sign up
         Given the following user exists
         | firstname | lastname | email         | password | password_confirmation |
         | Hanna     | Nyman    | hanna@tuna.se | password | password              |
-        And I visit the page
+        And I visit the site
         And I click 'Sign up'
 
     Scenario: When I fill in the sign up form, I can sign up [Happy Path]
-        When I fill in 'Name' field with 'Hanna'
-        And I fill in 'Address' field with '111 lakeview'
-        And I fill in 'Phone' field with '123456'
+        When I fill in 'Firstname' field with 'Hanna'
+        And I fill in 'Lastname' field with 'Nyman'
         And I fill in 'Email' field with 'hanna@tuna.se'
         And I fill in 'Password' field with 'password'
         And I fill in 'Password confirmation' field with 'password'
         And I click 'Sign up'
+        Then show me the page
         Then I should see 'Hello, Hanna'
     
     Scenario: When I don't fill in the sign up form I get error messages [Sad Path]
