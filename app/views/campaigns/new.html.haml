@@ -1,4 +1,4 @@
-= form_with model: @campaign local: true do |form|
+= form_with scope: :campaign, url: campaigns_path, local: true do |form|
     - if @campaign.errors.any?
         #error_explanation
             %h2

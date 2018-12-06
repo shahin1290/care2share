@@ -1,4 +1,9 @@
 class CampaignsController < ApplicationController
+  before_action :authenticate_user!, only: [:admin, :new, :create, :edit, :update, :destroy]
+
+  def admin
+    @campaigns = Campaign.where(user: current_user).order('created_at DESC')
+  end
   def index
     @campaigns = Campaign.all
   end
@@ -17,7 +22,10 @@ class CampaignsController < ApplicationController
   def create
     @campaign = Campaign.new(params.require(:campaign).permit(:title, :description, :amount_raised))
     @campaign.amount_raised = 0
+    @campaign.user_id = current_user.id
+    
     if @campaign.save
+      
       redirect_to campaigns_path
     else
       render 'new'
@@ -40,5 +48,9 @@ class CampaignsController < ApplicationController
  
     redirect_to campaigns_path
   end
+
+  private
+
+ 
   
 end
