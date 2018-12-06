@@ -1,0 +1,38 @@
+= form_with scope: :campaign, url: campaigns_path, local: true do |form|
+    - if @campaign.errors.any?
+        #error_explanation
+            %h2
+                = pluralize(@campaign.errors.count, "error")
+                prohibited
+                this campaign from being saved:
+            %ul
+                - @campaign.errors.full_messages.each do |msg|
+                    %li= msg   
+    %p
+        = form.label :goal
+        %br/
+        = form.text_field :goal
+    %p
+        = form.label :Company_name
+        %br/
+        = form.text_field :Company_name
+    %p
+        = form.label :Postal_code
+        %br/
+        = form.text_field :Postal_code
+    %p
+        = form.label :Category
+        %br/
+        = form.text_field :Category
+    %p
+        = form.label :title
+        %br/
+        = form.text_field :title
+    %p
+        = form.label :description
+        %br/
+        = form.text_area :description
+    %p
+    
+    %p
+        = form.submit
