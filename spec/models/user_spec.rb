@@ -1,5 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+
+    describe 'DB table' do
+      it { is_expected.to have_db_column :firstname }
+      it { is_expected.to have_db_column :lastname }
+    end
+  
+    describe 'Validations' do
+      it { is_expected.to validate_presence_of :firstname }
+      it { is_expected.to validate_presence_of :lastname }
+    end
+  
+    describe 'Associations' do
+      it { should have_many(:campaigns) }
+    end
+  
+  end

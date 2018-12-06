@@ -13,6 +13,10 @@ RSpec.describe Campaign, type: :model do
     it { is_expected.to validate_presence_of :amount_raised }
   end
 
+  describe 'Associations' do
+    it { should belong_to(:user) }
+  end
+
   describe 'Factory' do
     it 'should have valid Factory' do
       expect(FactoryBot.create(:campaign)).to be_valid 
