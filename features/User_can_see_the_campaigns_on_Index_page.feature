@@ -12,5 +12,5 @@ Feature: User can see the campaigns on index page
         And I visit the site
         Then I should see 'Brain surgery'
         And I should see 'I grew up always helping others.'
-        And I should see '1000'
+        And I should see '1000'   
       
