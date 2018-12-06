@@ -11,11 +11,11 @@ Feature: User can sign up
         And I click 'Sign up'
 
     Scenario: When I fill in the sign up form, I can sign up [Happy Path]
-        When I fill in 'user_firstname' field with 'John'
-        And I fill in 'user_lastname' field with 'Doe'
-        And I fill in 'Email' field with 'johndoe@hotmail.com'
-        And I fill in 'Password' field with 'password'
-        And I fill in 'Password confirmation' field with 'password'
+        When I fill in 'user_firstname' with 'John'
+        And I fill in 'user_lastname' with 'Doe'
+        And I fill in 'Email' with 'johndoe@hotmail.com'
+        And I fill in 'Password' with 'password'
+        And I fill in 'Password confirmation' with 'password'
         And I click 'Sign up'
         Then I should see 'Hello, John!'
     
@@ -28,12 +28,12 @@ Feature: User can sign up
         And I should see "Last name can't be blank"
 
     Scenario: When Password and Password confirmation don't match I get error message [Sad Path]
-        When I fill in 'Password' field with 'password'
-        And I fill in 'Password confirmation' field with 'hello'
+        When I fill in 'Password' with 'password'
+        And I fill in 'Password confirmation' with 'hello'
         And I click 'Sign up'
         Then I should see "Password confirmation doesn't match Password"
 
     Scenario: When Email is taken I get error message [Sad Path]
-        When I fill in 'Email' field with 'hanna@tuna.se'
+        When I fill in 'Email' with 'hanna@tuna.se'
         And I click 'Sign up'
         Then I should see "Email has already been taken"

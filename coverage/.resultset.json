@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/models/user.rb": [
+      "/home/shahin/Documents/craft_academy/care2share/app/models/user.rb": [
         1,
         null,
         null,
@@ -13,19 +13,39 @@
         null,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/models/application_record.rb": [
+      "/home/shahin/Documents/craft_academy/care2share/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/controllers/campaigns_controller.rb": [
+      "/home/shahin/Documents/craft_academy/care2share/app/models/campaign.rb": [
         1,
         1,
-        5,
+        null
+      ],
+      "/home/shahin/Documents/craft_academy/care2share/app/controllers/campaigns_controller.rb": [
+        1,
+        1,
+        9,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
         null,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/controllers/application_controller.rb": [
+      "/home/shahin/Documents/craft_academy/care2share/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -38,43 +58,37 @@
         null,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/helpers/application_helper.rb": [
+      "/home/shahin/Documents/craft_academy/care2share/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/helpers/campaigns_helper.rb": [
+      "/home/shahin/Documents/craft_academy/care2share/app/helpers/campaigns_helper.rb": [
         1,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/models/campaign.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/mailers/application_mailer.rb": [
+      "/home/shahin/Documents/craft_academy/care2share/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/channels/application_cable/connection.rb": [
+      "/home/shahin/Documents/craft_academy/care2share/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/channels/application_cable/channel.rb": [
+      "/home/shahin/Documents/craft_academy/care2share/app/channels/application_cable/channel.rb": [
         0,
         0,
+        0,
+        0
+      ],
+      "/home/shahin/Documents/craft_academy/care2share/app/jobs/application_job.rb": [
         0,
         0
       ]
     },
-    "timestamp": 1544049689
+    "timestamp": 1544093211
   }
 }
