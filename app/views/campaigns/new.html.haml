@@ -4,7 +4,7 @@
             %h2
                 = pluralize(@campaign.errors.count, "error")
                 prohibited
-                this dish from being saved:
+                this campaign from being saved:
             %ul
                 - @campaign.errors.full_messages.each do |msg|
                     %li= msg   

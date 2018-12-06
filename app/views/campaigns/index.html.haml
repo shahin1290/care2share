@@ -1,6 +1,9 @@
 %h1 List of Campaigns
 - @campaigns.each do |campaign|
-    %p Title: #{campaign.title}
+    %p= link_to "#{campaign.title}", campaign
     %p Story: #{campaign.description}
     %p Amount Raised: #{campaign.amount_raised}
+
+    
 %p= link_to 'Create a Campaign', new_campaign_path 
+
