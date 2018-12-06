@@ -10,6 +10,8 @@
     %p= link_to "#{campaign.title}", campaign_path(campaign)
     %p= campaign.description
     %p= campaign.amount_raised
+    %p= link_to 'Edit', edit_campaign_path(campaign)
+    %p= link_to 'Destroy', campaign_path(campaign),method: :delete, data: { confirm: 'Are you sure?' }
     
 %p= link_to 'Create a Campaign', new_campaign_path 
 
