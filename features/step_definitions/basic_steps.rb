@@ -1,9 +1,3 @@
-Given('the following user exists') do |table|
-    table.hashes.each do |user|
-        FactoryBot.create(:user, user)
-    end
-end
-
 Given('I click {string}') do |link|
     click_on link
 end

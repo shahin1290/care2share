@@ -5,9 +5,13 @@ Feature: User can see the campaigns on index page
     I would like to see a list of available campaigns on the index page
     
     Scenario: User can see the campaigns on index page
-        Given the following campaigns exists
-        | title        | description                      | amount_raised |
-        |Brain surgery | I grew up always helping others. | 1000.00       |
+        Given the following user exists
+        | firstname | lastname | 
+        | Hanna     | Nyman    | 
+        
+        Given the following campaign exists
+        | title         | description                      | amount_raised |
+        | Brain surgery | I grew up always helping others. | 1000.00       |
      
         And I visit the site
         Then I should see "Brain surgery"

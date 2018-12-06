@@ -11,6 +11,8 @@
         1,
         1,
         null,
+        1,
+        null,
         null
       ],
       "/Users/Camron/Desktop/Craft Academy/care2share/app/models/application_record.rb": [
@@ -22,12 +24,14 @@
         1,
         1,
         null,
+        1,
+        null,
         null
       ],
       "/Users/Camron/Desktop/Craft Academy/care2share/app/controllers/campaigns_controller.rb": [
         1,
         1,
-        6,
+        1,
         null,
         null
       ],
@@ -38,8 +42,8 @@
         1,
         null,
         1,
-        8,
-        8,
+        0,
+        0,
         null,
         null,
         null
@@ -75,7 +79,7 @@
         0
       ]
     },
-    "timestamp": 1544087770
+    "timestamp": 1544120391
   },
   "RSpec": {
     "coverage": {
@@ -89,6 +93,8 @@
         1,
         1,
         null,
+        1,
+        null,
         null
       ],
       "/Users/Camron/Desktop/Craft Academy/care2share/app/models/application_record.rb": [
@@ -106,6 +112,8 @@
       ],
       "/Users/Camron/Desktop/Craft Academy/care2share/app/models/campaign.rb": [
         1,
+        1,
+        null,
         1,
         null,
         null
@@ -153,6 +161,6 @@
         0
       ]
     },
-    "timestamp": 1544087765
+    "timestamp": 1544120504
   }
 }
