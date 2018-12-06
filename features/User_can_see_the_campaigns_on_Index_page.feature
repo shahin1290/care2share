@@ -13,4 +13,3 @@ Feature: User can see the campaigns on index page
         Then I should see "Brain surgery"
         And I should see "I grew up always helping others."
         And I should see "1000"
-        And show me the page

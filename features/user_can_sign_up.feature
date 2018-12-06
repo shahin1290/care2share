@@ -21,7 +21,6 @@ Feature: User can sign up
     
     Scenario: When I don't fill in the sign up form I get error messages [Sad Path]
         When I click 'Sign up'
-        Then show me the page
         Then I should see "Email can't be blank"
         And I should see "Password can't be blank"
         And I should see "First name can't be blank"
