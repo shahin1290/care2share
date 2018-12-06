@@ -7,7 +7,7 @@ RSpec.describe User, type: :model do
       it { is_expected.to have_db_column :lastname }
     end
   
-    describe 'validations' do
+    describe 'Validations' do
       it { is_expected.to validate_presence_of :firstname }
       it { is_expected.to validate_presence_of :lastname }
     end
