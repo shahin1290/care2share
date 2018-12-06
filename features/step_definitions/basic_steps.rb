@@ -8,7 +8,7 @@ Given('I click {string}') do |link|
     click_on link
 end
 
-When('I fill in {string} field with {string}') do |field, input|
+When('I fill in {string} with {string}') do |field, input|
     fill_in field, with: input
 end
 

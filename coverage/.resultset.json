@@ -21,13 +21,28 @@
       "/Users/hannaswdn/Desktop/care2share/app/models/campaign.rb": [
         1,
         1,
-        null,
         null
       ],
       "/Users/hannaswdn/Desktop/care2share/app/controllers/campaigns_controller.rb": [
         1,
         1,
-        6,
+        9,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
         null,
         null
       ],
@@ -75,7 +90,7 @@
         0
       ]
     },
-    "timestamp": 1544110906
+    "timestamp": 1544111376
   },
   "RSpec": {
     "coverage": {
@@ -107,7 +122,6 @@
       "/Users/hannaswdn/Desktop/care2share/app/models/campaign.rb": [
         1,
         1,
-        null,
         null
       ],
       "/Users/hannaswdn/Desktop/care2share/app/mailers/application_mailer.rb": [
@@ -125,6 +139,22 @@
         0,
         0,
         0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         0
       ],
       "/Users/hannaswdn/Desktop/care2share/app/controllers/application_controller.rb": [
@@ -153,6 +183,6 @@
         0
       ]
     },
-    "timestamp": 1544110871
+    "timestamp": 1544111383
   }
 }
