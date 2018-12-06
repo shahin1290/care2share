@@ -6,6 +6,7 @@ Feature: Create campaign
     Background: 
       Given I visit the site
       And I click 'Create a Campaign'
+      
     Scenario: Successfully create a campaign [Happy Path]
       When I fill in 'Goal' with '1000'
       And I fill in 'Company name' with 'SAAB'

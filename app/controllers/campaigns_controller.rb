@@ -10,7 +10,8 @@ class CampaignsController < ApplicationController
   def create
     @campaign = Campaign.new(params.require(:campaign).permit(:title, :description, :amount_raised))
     @campaign.amount_raised = 0
-    if @campaign.save
+    @campaign.save
+    if @campaign.persisted?
       redirect_to campaigns_path
     else
       render 'new'
