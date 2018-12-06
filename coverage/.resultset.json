@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/models/user.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/models/user.rb": [
         1,
         null,
         null,
@@ -13,19 +13,25 @@
         null,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/models/application_record.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/controllers/campaigns_controller.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/models/campaign.rb": [
         1,
         1,
-        5,
         null,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/controllers/application_controller.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/controllers/campaigns_controller.rb": [
+        1,
+        1,
+        6,
+        null,
+        null
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -38,43 +44,115 @@
         null,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/helpers/application_helper.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/helpers/campaigns_helper.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/helpers/campaigns_helper.rb": [
         1,
         null
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/models/campaign.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/mailers/application_mailer.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/jobs/application_job.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/jobs/application_job.rb": [
         0,
         0
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/channels/application_cable/connection.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/channels/application_cable/connection.rb": [
         0,
         0,
         0,
         0
       ],
-      "/Users/Camron/Desktop/Craft Academy/care2share/app/channels/application_cable/channel.rb": [
+      "/Users/hannaswdn/Desktop/care2share/app/channels/application_cable/channel.rb": [
         0,
         0,
         0,
         0
       ]
     },
-    "timestamp": 1544049689
+    "timestamp": 1544110906
+  },
+  "RSpec": {
+    "coverage": {
+      "/Users/hannaswdn/Desktop/care2share/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/helpers/campaigns_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/models/campaign.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/controllers/campaigns_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/controllers/application_controller.rb": [
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/hannaswdn/Desktop/care2share/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1544110871
   }
 }
