@@ -6,7 +6,7 @@ When('I fill in {string} field with {string}') do |field, input|
     fill_in field, with: input
 end
 
-When("I visit the site") do
+When('I visit the site') do
     visit root_path
 end
 

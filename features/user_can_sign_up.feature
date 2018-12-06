@@ -30,9 +30,9 @@ Feature: User can sign up
         When I fill in 'Password' field with 'password'
         And I fill in 'Password confirmation' field with 'hello'
         And I click 'Sign up'
-        Then I should see "Password confirmation doesn't match Password"
+        Then I should see 'Password confirmation doesn't match Password'
 
     Scenario: When Email is taken I get error message [Sad Path]
         When I fill in 'Email' field with 'hanna@tuna.se'
         And I click 'Sign up'
-        Then I should see "Email has already been taken"
+        Then I should see 'Email has already been taken'
