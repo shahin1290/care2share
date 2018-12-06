@@ -14,7 +14,7 @@ RSpec.describe Campaign, type: :model do
   end
 
   describe 'Associations' do
-    it { should have_one(:user) }
+    it { should belong_to(:user) }
   end
 
   describe 'Factory' do
