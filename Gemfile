@@ -12,6 +12,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
+gem 'devise'
 
 
 group :development, :test do
@@ -25,6 +26,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'coveralls', require: false
   gem 'launchy'
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
 end
 
 group :development do
