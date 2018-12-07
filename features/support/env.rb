@@ -12,13 +12,15 @@ end
 
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
-Chromedriver.set_version '2.33'
+Chromedriver.set_version '2.36' unless ENV['CI'] == 'true'
 
-Capybara.register_driver :selenium do |app|
+chrome_options = %w(no-sandbox disable-popup-blocking disable-infobars)
+chrome_options << 'headless' if ENV['CI'] == 'true'
+
+Capybara.register_driver :chrome do |app|
   options = Selenium::WebDriver::Chrome::Options.new(
-      args: %w( disable-popup-blocking disable-infobars)
+      args: chrome_options
   )
-
   Capybara::Selenium::Driver.new(
       app,
       browser: :chrome,
@@ -26,5 +28,5 @@ Capybara.register_driver :selenium do |app|
   )
 end
 
-Capybara.javascript_driver = :selenium
-Capybara.default_driver = :selenium
+Capybara.server = :puma
+Capybara.javascript_driver = :chrome
