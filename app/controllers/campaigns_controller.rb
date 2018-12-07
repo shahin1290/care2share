@@ -1,7 +1,6 @@
 class CampaignsController < ApplicationController
 
   def index
-    binding.pry
     @campaigns = Campaign.all
   end
 
