@@ -3,6 +3,10 @@ Feature: Create campaign
     In order to raise funds
     I would like to be able to create a campaign 
 
+    Given the following user exists
+    | firstname | lastname | email            |
+    | Hanna     | Nyman    | hanna@random.com |
+
     Background: 
       Given I visit the site
       And I click 'Create a Campaign'
