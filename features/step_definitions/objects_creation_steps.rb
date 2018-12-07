@@ -6,12 +6,11 @@ end
 
 Given('the following campaign exists') do |table|
     table.hashes.each do |campaign|
-        FactoryBot.create(:campaign, campaign)
+        campaign_user = User.find_or_create_by(email: campaign[:user])
+        campaign.except!('user')
+        Campaign.create(campaign.merge(user: campaign_user))
     end
 end
 
-Given("the following campaigns exists") do |table|
-    # table is a Cucumber::MultilineArgument::DataTable
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+
   
