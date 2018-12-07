@@ -17,3 +17,12 @@ end
 Then('show me the page') do
     save_and_open_page
 end
+
+When('I have logged in') do
+    steps %{
+        Given I click Log in
+        And I fill in "Email" with 'hanna@random.com'
+        And I fill in "Password" with 'password'
+        And I click 'Log in'
+    }
+end

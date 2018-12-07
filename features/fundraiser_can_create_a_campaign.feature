@@ -3,15 +3,18 @@ Feature: Create campaign
     In order to raise funds
     I would like to be able to create a campaign 
 
-    Given the following user exists
-    | firstname | lastname | email            |
-    | Hanna     | Nyman    | hanna@random.com |
+    Background:
+      Given the following user exists
+      | firstname | lastname | email            |
+      | Hanna     | Nyman    | hanna@random.com |
 
-    Background: 
-      Given I visit the site
+      And I visit the site
       And I click 'Create a Campaign'
       
-    Scenario: Successfully create a campaign [Happy Path]
+    Scenario: Successfully create a campaign when not logged in [Happy Path]
+      Then show me the page
+      And I click 'Log in'
+      And I have logged in
       When I fill in 'Goal' with '1000'
       And I fill in 'Company name' with 'SAAB'
       And I fill in 'Postal code' with '1234'

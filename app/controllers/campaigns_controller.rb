@@ -4,13 +4,16 @@ class CampaignsController < ApplicationController
   end
 
   def new
-    @campaign = Campaign.new
+    if user_signed_in?
+      @campaign = Campaign.new
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
-    if current_user?
       @campaign = Campaign.new(params.require(:campaign).permit(:title, :description, :amount_raised))
-      @campaign["user_id"] = current_user["id"]
+      @campaign['user_id'] = current_user['id']
       @campaign.amount_raised = 0
       @campaign.save
       if @campaign.persisted?
@@ -18,9 +21,5 @@ class CampaignsController < ApplicationController
       else
         render 'new'
       end
-    else
-      redirect_to new_user_session_path
-    end
   end
-  
 end
