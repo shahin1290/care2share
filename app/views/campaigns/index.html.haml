@@ -1,6 +1,7 @@
 - if user_signed_in?
     %p= "Hello, #{current_user.firstname}!"
     %p= link_to 'Log out', destroy_user_session_path, method: :delete
+    %p= link_to 'Manage your account', admin_path
 - else
     %p= link_to 'Sign up', new_user_registration_path
     %p= link_to 'Log in', new_user_session_path
@@ -10,6 +11,7 @@
     %p= link_to "#{campaign.title}", campaign
     %p Story: #{campaign.description}
     %p Amount Raised: #{campaign.amount_raised}
+    
 
     
 %p= link_to 'Create a Campaign', new_campaign_path 

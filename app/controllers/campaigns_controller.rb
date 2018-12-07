@@ -1,4 +1,6 @@
 class CampaignsController < ApplicationController
+  before_action :set_campaign, only: [:show, :edit, :update, :destroy]
+
   def admin
     @campaigns = Campaign.where(user: current_user).order('created_at DESC')
   end
@@ -8,7 +10,10 @@ class CampaignsController < ApplicationController
   end
 
   def show
-    @campaign = Campaign.find(params[:id])
+   
+  end
+  def edit
+
   end
 
   def new
@@ -20,7 +25,7 @@ class CampaignsController < ApplicationController
   end
 
   def create
-      @campaign = Campaign.new(params.require(:campaign).permit(:title, :description, :amount_raised))
+      @campaign = Campaign.new(campaign_params)
       @campaign['user_id'] = current_user['id']
       @campaign.amount_raised = 0
       @campaign.save
@@ -30,4 +35,28 @@ class CampaignsController < ApplicationController
         render 'new'
       end
   end
+
+  def update
+    if @campaign.update(campaign_params)
+      redirect_to @campaign, notice: 'campaign was successfully updated.' 
+    else
+      render 'edit' 
+    end
+  end
+
+  def destroy
+    @campaign.destroy
+      redirect_to campaigns_url, notice: 'campaign was successfully deleted.' 
+  end
+
+
+  private
+
+    def set_campaign
+      @campaign = campaign.find(params[:id])
+    end
+
+    def campaign_params
+      params.require(:campaign).permit(:title, :description, :amount_raised)
+    end
 end
