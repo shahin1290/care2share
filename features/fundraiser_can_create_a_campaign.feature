@@ -9,12 +9,10 @@ Feature: Create campaign
       | Hanna     | Nyman    | hanna@random.com |
 
       And I visit the site
-      And I click 'Create a Campaign'
       
     Scenario: Successfully create a campaign when not logged in [Happy Path]
-      When I click 'Log in'
+      When I click 'Create a Campaign'
       And I have logged in
-      Then I click 'Create a Campaign'
       And I fill in 'Goal' with '1000'
       And I fill in 'Company name' with 'SAAB'
       And I fill in 'Postal code' with '1234'
@@ -39,7 +37,6 @@ Feature: Create campaign
       Then I should see 'I have a bad heath.'
 
     Scenario: Create a campaign when logged in [Sad Path]
-      When I click 'Log in'
       And I have logged in
       Then I click 'Create a Campaign'
       And I click 'Save Campaign' 

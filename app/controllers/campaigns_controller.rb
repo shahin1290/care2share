@@ -1,7 +1,10 @@
 class CampaignsController < ApplicationController
+
   def index
+    binding.pry
     @campaigns = Campaign.all
   end
+
   def show
     @campaign = Campaign.find(params[:id])
   end
@@ -9,8 +12,8 @@ class CampaignsController < ApplicationController
   def new
     if user_signed_in?
       @campaign = Campaign.new
-    else
-      redirect_to new_user_session_path
+    else 
+      authenticate_user!
     end
   end
 
