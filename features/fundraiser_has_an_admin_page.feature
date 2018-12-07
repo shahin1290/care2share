@@ -10,7 +10,7 @@ Feature: Fundraiser has an admin page
             | Hanna     | Nyman    | hanna@tuna.se | password | password              | 
             |aaa        |   aaa    |aaa@aaa.com    |aaaaaa    |aaaaaa                 |
         
-        And the following campaigns exists
+        And the following campaign exists
             | title        | description                      | amount_raised |user|
             |Tuna          | I grew up always helping others. | 1000.00       |hanna@tuna.se|
             |Help|I need some help|20000|aaa@aaa.com|
