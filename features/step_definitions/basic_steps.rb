@@ -26,3 +26,8 @@ When('I have logged in') do
         And I click 'Log in'
     }
 end
+
+Given('I visit the {string} site') do |value|
+    campaign = Campaign.find_by(title: value)
+    visit campaign_path(campaign[:id])
+end
