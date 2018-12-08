@@ -19,7 +19,7 @@ Feature: Create campaign
       And I fill in 'Category' with 'Health'
       And I fill in 'Title' with 'Bad Health'
       And I fill in 'Description' with 'I have a bad heath.'
-      And I click 'Save Campaign' 
+      And I click 'Create Campaign' 
       Then I should see 'Bad Health'
       Then I should see 'I have a bad heath.'
 
@@ -32,14 +32,14 @@ Feature: Create campaign
       And I fill in 'Category' with 'Health'
       And I fill in 'Title' with 'Bad Health'
       And I fill in 'Description' with 'I have a bad heath.'
-      And I click 'Save Campaign' 
+      And I click 'Create Campaign' 
       Then I should see 'Bad Health'
       Then I should see 'I have a bad heath.'
 
     Scenario: Create a campaign when logged in [Sad Path]
       Given I have logged in
       And I click 'Create a Campaign'
-      When I click 'Save Campaign' 
+      When I click 'Create Campaign' 
       Then I should see "Title can't be blank"
       And I should see "Description can't be blank"
       

@@ -10,10 +10,9 @@ class CampaignsController < ApplicationController
   end
 
   def show
-   
   end
-  def edit
 
+  def edit
   end
 
   def new
@@ -30,7 +29,7 @@ class CampaignsController < ApplicationController
       @campaign.amount_raised = 0
       @campaign.save
       if @campaign.persisted?
-        redirect_to campaigns_path
+        redirect_to admin_path
       else
         render 'new'
       end
@@ -46,14 +45,14 @@ class CampaignsController < ApplicationController
 
   def destroy
     @campaign.destroy
-      redirect_to campaigns_url, notice: 'campaign was successfully deleted.' 
+    redirect_to admin_path, notice: 'campaign was successfully deleted.' 
   end
 
 
   private
 
     def set_campaign
-      @campaign = campaign.find(params[:id])
+      @campaign = Campaign.find(params[:id])
     end
 
     def campaign_params
