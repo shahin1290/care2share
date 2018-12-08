@@ -1,4 +1,4 @@
-@javascript 
+@javascript @stripe
 Feature: User can donate via a form
 
     As a User
