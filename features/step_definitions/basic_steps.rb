@@ -32,7 +32,7 @@ Given('I visit the {string} site') do |value|
     visit campaign_path(campaign[:id])
 end
 
-And('I fill in the payment form') do
+And('I fill in the card form') do
     card_no = '4242424242424242'
     sleep 5
 
