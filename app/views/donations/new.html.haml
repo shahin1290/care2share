@@ -1,25 +1,5 @@
-%h1 Enter your donation
-
-= form_with scope: :donations, url: donations_path, local: true do |form|
-    %p
-        = form.label :amount
-        %br/
-        = form.number_field :amount
-    %p
-        = form.label :first_name
-        %br/
-        = form.text_field :first_name
-    %p
-        = form.label :last_name
-        %br/
-        = form.text_field :last_name
-    %p
-        = form.label :your_email
-        %br/
-        = form.email_field :your_email
-    %p
-        = form.label :postal_code
-        %br/
-        = form.number_field :postal_code
-    %p
-        = form.submit 'Proceed to pay'
+= form_with url: donations_path, local: true, id: 'donate_form' do |form|
+    = form.label 'Credit or debit card'
+    #card-element
+    = form.submit 'Submit payment'
+    

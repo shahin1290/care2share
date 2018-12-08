@@ -14,6 +14,7 @@ Feature: User can donate via a form
         And I should see 'I grew up always helping others.'
         And I should see '1000'
         When I click 'donate now'
+        Then stop
         And I fill in 'Amount' with '500'
         And I fill in 'First name' with 'Hanna'
         And I fill in 'Last name' with 'Nyman'
