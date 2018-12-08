@@ -27,7 +27,7 @@ const stripeTokenHandler = (token) => {
 
 const initiateStripe = () => {
     // Create a Stripe client.
-    const stripe = Stripe('pk_test_QicERB8w3kyqaYW3hUUQylRH');
+    const stripe = Stripe('pk_test_480q1THWpDWithXmJnhNDIyw');
     // Create an instance of Elements.
     const elements = stripe.elements();
     // Custom styling can be passed to options when creating an Element.
