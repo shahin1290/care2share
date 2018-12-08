@@ -36,16 +36,21 @@ class CampaignsController < ApplicationController
   end
 
   def update
-    if @campaign.update(campaign_params)
-      redirect_to @campaign, notice: 'campaign was successfully updated.' 
+    if @campaign.user == current_user
+      @campaign.update(campaign_params)
+      redirect_to admin_path, notice: 'campaign was successfully updated.' 
     else
       render 'edit' 
     end
   end
 
   def destroy
-    @campaign.destroy
-    redirect_to admin_path, notice: 'campaign was successfully deleted.' 
+    if @campaign.user == current_user
+      @campaign.destroy
+      redirect_to admin_path, notice: 'campaign was successfully deleted.' 
+    else
+      redirect_to admin_path 
+    end
   end
 
 
