@@ -28,12 +28,12 @@ end
 
 Before '@stripe' do
   chrome_options << 'headless'
-  # StripeMock.start
+  StripeMock.start
 end
 
-# After '@stripe' do 
-#   StripeMock.stop
-# end
+After '@stripe' do 
+  StripeMock.stop
+end
 
 Capybara.server = :puma
 Capybara.javascript_driver = :chrome

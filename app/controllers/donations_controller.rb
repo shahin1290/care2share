@@ -7,7 +7,7 @@ class DonationsController < ApplicationController
     # car = Automobile.find(params[:automobile_id])
     customer = Stripe::Customer.create(
       email: current_user.email,
-      source: params['stripeToken'],
+      source: get_token(params),
       description: [current_user.firstname, current_user.lastname].join(' ')
     )
 
@@ -19,17 +19,20 @@ class DonationsController < ApplicationController
     )
 
     if charge[:paid]
-      redirect_to new_user_session_path, notice: 'Thank you for your donation!'
+      redirect_to campaigns_path, notice: 'Thank you for your donation!'
     else
-      redirect_to new_user_registration_path, notice: 'Cheap ass!'
+      redirect_to campaigns_path, notice: 'Cheap ass!'
     end
   end
-  # private
-  # def get_token(params)
-  #   Rails.env.test? ? generate_test_token : params['stripeToken']
-  # end
-  # def generate_test_token
-  #   StripeMock.create_test_helper.generate_card_token
-  # end
+
+  private
+
+  def get_token(params)
+    Rails.env.test? ? generate_test_token : params['stripeToken']
+  end
+
+  def generate_test_token
+    StripeMock.create_test_helper.generate_card_token
+  end
 
 end
