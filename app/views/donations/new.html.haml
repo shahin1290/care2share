@@ -1,7 +1,26 @@
 = form_with url: donations_path, local: true, id: 'donate_form' do |form|
-    = form.label 'Credit or debit card'
-
-    #card-element
-
-    = form.submit 'Submit Payment'
-    
+    %p
+        = form.label :enter_your_donation
+        %br/
+        = form.number_field :amount
+    %p
+        = form.label :first_name
+        %br/
+        = form.text_field :firstname
+    %p
+        = form.label :last_name
+        %br/
+        = form.text_field :lastname
+    %p
+        = form.label :email
+        %br/
+        = form.email_field :email
+    %p
+        = form.label :postal_code
+        %br/
+        = form.number_field :postalcode
+    %p
+        = form.label 'Credit or debit card' 
+        #card-element
+    %p
+    = form.submit 'Submit Payment'    
