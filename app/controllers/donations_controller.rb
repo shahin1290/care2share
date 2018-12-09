@@ -13,19 +13,26 @@ class DonationsController < ApplicationController
 
     charge = Stripe::Charge.create(
       customer: customer.id,
-      amount: 10000,
+      amount: 100_00,  # how do we change this to the actual amount paid?
       currency: 'sek',
       description: 'Donation'
     )
 
     if charge[:paid]
-      redirect_to campaigns_path, notice: 'Thank you for your donation!'
+      # increase_amount_raised  ????
+      redirect_to campaign_details, notice: 'Thank you for your donation!'
     else
-      redirect_to campaigns_path, notice: 'Cheap ass!'
+      redirect_to campaign_details, notice: 'Cheap ass!'
     end
+
   end
 
   private
+
+  def campaign_details
+    campaign = Campaign.find_by(title: value)
+    return campaign_path(campaign[:id])
+  end
 
   def get_token(params)
     Rails.env.test? ? generate_test_token : params['stripeToken']
