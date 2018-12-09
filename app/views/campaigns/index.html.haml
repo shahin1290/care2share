@@ -1,5 +1,6 @@
 %p= link_to 'How it works', information_path
 
+
 %link href="../../assets/stylesheets/navbar.sass", rel="stylesheet"
 
 .container
@@ -34,9 +35,5 @@
 
         #campaign_link    
         %p= link_to 'Create a Campaign', new_campaign_path 
-
-    .contact
-        .contact_info
-            %h3 Contact us section
-            %p  Email
-            %p  Phone
+        
+= render 'footer'
