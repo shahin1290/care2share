@@ -1,18 +1,36 @@
-- if user_signed_in?
-    %p= "Hello, #{current_user.firstname}!"
-    %p= link_to 'Log out', destroy_user_session_path, method: :delete
-    %p= link_to 'Manage your account', admin_path
-- else
-    %p= link_to 'Sign up', new_user_registration_path
-    %p= link_to 'Log in', new_user_session_path
+.container
 
-%h1 List of Campaigns
-- @campaigns.each do |campaign|
-    %p= link_to "#{campaign.title}", campaign
-    %p Story: #{campaign.description}
-    %p Amount Raised: #{campaign.amount_raised}
-    
+    .header
 
-    
-%p= link_to 'Create a Campaign', new_campaign_path 
+        -# %img{src: "app/assets/images/photo-hero-george@2x.jpg"}
 
+        .login
+            - if user_signed_in?
+                %p= "Hello, #{current_user.firstname}!"
+                %p= link_to 'Log out', destroy_user_session_path, method: :delete
+                %p= link_to 'Manage your account', admin_path
+            - else
+                %p= link_to 'Sign up', new_user_registration_path
+                %p= link_to 'Log in', new_user_session_path
+
+        .how_it_works
+
+    .campaigns
+
+        %h1#campaign_header Top fundraisers
+
+        .campaign_cards
+            - @campaigns.each do |campaign|
+                .card
+                    %p= link_to "#{campaign.title}", campaign
+                    %p Story: #{campaign.description}
+                    %p Amount Raised: #{campaign.amount_raised}
+
+        #campaign_link    
+        %p= link_to 'Create a Campaign', new_campaign_path 
+
+    .contact
+        .contact_info
+            %h3 Contact us section
+            %p  Email
+            %p  Phone
