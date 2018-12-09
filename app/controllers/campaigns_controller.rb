@@ -4,6 +4,9 @@ class CampaignsController < ApplicationController
   def admin
     @campaigns = Campaign.where(user: current_user).order('created_at DESC')
   end
+  def information 
+    
+  end
 
   def index
     @campaigns = Campaign.all
