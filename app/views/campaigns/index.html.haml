@@ -1,3 +1,5 @@
+%link href="../../assets/stylesheets/" rel="stylesheet"
+
 .container
 
     .header
@@ -5,13 +7,15 @@
         -# %img{src: "app/assets/images/photo-hero-george@2x.jpg"}
 
         .login
+            .logo
+
             - if user_signed_in?
-                %p= "Hello, #{current_user.firstname}!"
-                %p= link_to 'Log out', destroy_user_session_path, method: :delete
-                %p= link_to 'Manage your account', admin_path
+                %p#hello_name= "Hello, #{current_user.firstname}!"
+                %p.link= link_to 'Log out', destroy_user_session_path, method: :delete
+                %p.link= link_to 'Manage your account', admin_path
             - else
-                %p= link_to 'Sign up', new_user_registration_path
-                %p= link_to 'Log in', new_user_session_path
+                %p.link= link_to 'Sign up', new_user_registration_path
+                %p.link= link_to 'Log in', new_user_session_path
 
         .how_it_works
 
