@@ -18,19 +18,17 @@ class DonationsController < ApplicationController
     )
 
     if charge[:paid]
-      redirect_to campaign_details, notice: 'Thank you for your donation!'
+      @campaign = Campaign.find(params[:campaign_id])
+      @campaign.update_attribute(:amount_raised, @campaign.amount_raised += ((charge.amount)/100))
+      @campaign.save
+      redirect_to campaign_path(@campaign), notice: 'Thank you for your donation!'
     else
-      redirect_to campaign_details, notice: 'Cheap ass!'
+      redirect_to campaign_path(@campaign), notice: 'Cheap ass!'
     end
 
   end
 
   private
-
-  def campaign_details
-    campaign = Campaign.find(params[:campaign_id])
-    campaign_path(campaign)
-  end
 
   def get_token(params)
     Rails.env.test? ? generate_test_token : params['stripeToken']
