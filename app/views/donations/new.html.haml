@@ -21,10 +21,11 @@
             = form.email_field :email
         %p
             = form.label :postalcode, 'Postal code'
-            %br/
+            %br
             = form.number_field :postalcode
         %p
             = form.label 'Credit or debit card' 
             #card-element
+
         %p#submit-payment
-        = form.submit 'Submit Payment'
+            = form.submit 'Submit Payment'
