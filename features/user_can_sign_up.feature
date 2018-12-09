@@ -16,6 +16,7 @@ Feature: User can sign up
         And I fill in 'Email' with 'johndoe@hotmail.com'
         And I fill in 'Password' with 'password'
         And I fill in 'Password confirmation' with 'password'
+        Then show me the page
         And I click 'Sign up'
         Then I should see 'Hello, John!'
     
