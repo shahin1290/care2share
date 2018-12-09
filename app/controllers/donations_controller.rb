@@ -18,7 +18,6 @@ class DonationsController < ApplicationController
     )
 
     if charge[:paid]
-      # increase_amount_raised  ????  # how do we increase the 'total raised' with each donation?
       redirect_to campaign_details, notice: 'Thank you for your donation!'
     else
       redirect_to campaign_details, notice: 'Cheap ass!'
