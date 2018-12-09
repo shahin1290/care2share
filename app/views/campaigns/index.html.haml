@@ -1,6 +1,3 @@
-%p= link_to 'How it works', information_path
-
-
 %link href="../../assets/stylesheets/navbar.sass", rel="stylesheet"
 
 .container
@@ -11,7 +8,7 @@
 
         .login
             .logo
-
+            %p= link_to 'How it works', information_path
             - if user_signed_in?
                 %p#hello_name= "Hello, #{current_user.firstname}!"
                 %p.link= link_to 'Log out', destroy_user_session_path, method: :delete
@@ -42,5 +39,5 @@
                     %p= link_to "#{campaign.title}", campaign
                     %p Story: #{campaign.description}
                     %p Amount Raised: #{campaign.amount_raised}
-                    
+
 = render 'footer'
