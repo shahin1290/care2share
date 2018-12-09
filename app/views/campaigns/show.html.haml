@@ -1,10 +1,12 @@
-%p= @campaign.title
-%p= @campaign.description
-%p= @campaign.amount_raised
-= link_to 'donate now', new_donation_path(campaign_id: @campaign.id)
-%br/
-= link_to 'share on facebook', '#'
+%link{href: "../../assets/stylesheets/campaign_details.sass", rel: "stylesheet"}
 
-
-= render 'footer'
-
+.container
+    .header_img
+    .campaign_title
+        %p= @campaign.title
+    .campaign_description
+        %p= @campaign.description
+    .campaign_amount_raised
+        %p= @campaign.amount_raised
+    .donate_button
+        = link_to 'Donate now', new_donation_path(campaign_id: @campaign.id)

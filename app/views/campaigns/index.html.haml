@@ -4,8 +4,6 @@
 
     .header
 
-        -# %img{src: "app/assets/images/photo-hero-george@2x.jpg"}
-
         .login
             .logo
             %p= link_to 'How it works', information_path
@@ -16,8 +14,6 @@
             - else
                 %p.link= link_to 'Sign up', new_user_registration_path
                 %p.link= link_to 'Log in', new_user_session_path
-
-        .how_it_works
 
         .header_text
             #tagline
@@ -39,5 +35,3 @@
                     %p= link_to "#{campaign.title}", campaign
                     %p Story: #{campaign.description}
                     %p Amount Raised: #{campaign.amount_raised}
-
-= render 'footer'
