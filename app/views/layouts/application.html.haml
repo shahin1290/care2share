@@ -9,7 +9,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %script{src: 'https://js.stripe.com/v3/'}
   %body
-  
+    = render 'partials/navbar'
+
     = notice
 
     = yield
