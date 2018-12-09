@@ -10,3 +10,14 @@
         %p= @campaign.amount_raised
     .donate_button
         = link_to 'Donate now', new_donation_path(campaign_id: @campaign.id)
+= render 'partials/navbar'
+
+-# .campaign_wrapper
+-#     %p= @campaign.title
+-#     %p= @campaign.description
+-#     %p= @campaign.amount_raised
+-#     = link_to 'donate now', new_donation_path(campaign_id: @campaign.id)
+-#     %br/
+-#     = link_to 'share on facebook', '#'
+
+-#     = render 'footer'
