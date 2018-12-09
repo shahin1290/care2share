@@ -6,14 +6,15 @@
 
         .login
             .logo
-            %p= link_to 'How it works', information_path
             - if user_signed_in?
                 %p#hello_name= "Hello, #{current_user.firstname}!"
                 %p.link= link_to 'Log out', destroy_user_session_path, method: :delete
                 %p.link= link_to 'Manage your account', admin_path
+                %p.link= link_to 'How it works', information_path
             - else
                 %p.link= link_to 'Sign up', new_user_registration_path
                 %p.link= link_to 'Log in', new_user_session_path
+                %p.link= link_to 'How it works', information_path
 
         .header_text
             #tagline
@@ -31,7 +32,14 @@
         .campaign_cards
             - @campaigns.each do |campaign|
                 .card
-                    = link_to '', campaign
-                    %p= link_to "#{campaign.title}", campaign
-                    %p Story: #{campaign.description}
-                    %p Amount Raised: #{campaign.amount_raised}
+                    %p.campaign_img i
+                    %p.card_title= link_to "#{campaign.title}", campaign
+                    %p.card_amount Amount Raised: #{campaign.amount_raised}
+                    %p.card_story Story: #{campaign.description}
+
+-# .card
+  
+-#     .container
+-#       %h4
+-#         %b John Doe
+-#       %p Architect  Engineer

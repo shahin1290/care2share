@@ -46,23 +46,35 @@
   max-width: 650px
 
 .campaign_amount_raised
-  grid-column-start: 2
-  grid-column-end: span 1
-  grid-row-start: 1
-  grid-row-end: span 1
-  text-align: left
+  position: fixed
+  margin-left: 750px
+  margin-top: 170px
+  // rest is for button
+  // background-color: #E08441
+  vertical-align: middle
+  text-align: center
+  padding-bottom: 10px
+  width: 300px
+  height: 80px
+  color: #818181
+  font-size: 1.5rem
+  font-weight: 900
+  padding: 1rem
+  line-height: 1.2
+  text-decoration: none
+  text-shadow: 0.2px 0.2px #818181
+  border: 1px solid transparent
+  border-radius: 4px
+  transition: background-color .25s ease-out,color .25s ease-out
+  box-shadow: 0 0.02rem 0.02rem 0.02rem
+
 
 .donate_button
-  // grid-column-start: 2
-  // grid-column-end: span 1
-  // grid-row-start: 2
-  // grid-row-end: span 1
   position: fixed
-  font-size: 20px
-  color: white
   margin-left: 750px
-  margin-top: 200px
+  margin-top: 48px
   // rest is for button
+  background-color: #E08441
   vertical-align: middle
   text-align: center
   cursor: pointer
@@ -77,6 +89,9 @@
   text-shadow: 0.2px 0.2px #818181
   border: 1px solid transparent
   border-radius: 4px
-  background-color: #00b964
   transition: background-color .25s ease-out,color .25s ease-out
   box-shadow: 0 0.02rem 0.02rem 0.02rem
+
+.donate_button:hover
+  background-color: #fff
+
