@@ -15,6 +15,15 @@
 
         .how_it_works
 
+        .header_text
+            #tagline
+                %p Fundraising for the people 
+                %p and causes you care about
+                %br
+            #sub_text
+                %p Get started today.
+            %p#campaign_button= link_to 'Start a Campaign', new_campaign_path
+
     .campaigns
 
         %h1#campaign_header Top fundraisers
@@ -22,12 +31,10 @@
         .campaign_cards
             - @campaigns.each do |campaign|
                 .card
+                    = link_to '', campaign
                     %p= link_to "#{campaign.title}", campaign
                     %p Story: #{campaign.description}
                     %p Amount Raised: #{campaign.amount_raised}
-
-        #campaign_link    
-        %p= link_to 'Create a Campaign', new_campaign_path 
 
     .contact
         .contact_info
