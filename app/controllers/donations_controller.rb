@@ -1,31 +1,36 @@
 class DonationsController < ApplicationController
   def new
-    # @car = Automobile.find(params[:automobile_id])
+    @campaign_id = params[:campaign_id]
   end
 
   def create
-    # car = Automobile.find(params[:automobile_id])
     customer = Stripe::Customer.create(
-      email: current_user.email,
+      email: params[:email],
       source: get_token(params),
-      description: [current_user.firstname, current_user.lastname].join(' ')
+      description: [params[:firstname], params[:lastname]].join(' ')
     )
 
     charge = Stripe::Charge.create(
-      customer: customer.id,
-      amount: 10000,
+      customer: customer.id, 
+      amount: params[:amount].to_i * 100,
       currency: 'sek',
-      description: 'Donation'
+      description: 'Donation to Care2Share'
     )
 
     if charge[:paid]
-      redirect_to campaigns_path, notice: 'Thank you for your donation!'
+      redirect_to campaign_details, notice: 'Thank you for your donation!'
     else
-      redirect_to campaigns_path, notice: 'Cheap ass!'
+      redirect_to campaign_details, notice: 'Cheap ass!'
     end
+
   end
 
   private
+
+  def campaign_details
+    campaign = Campaign.find(params[:campaign_id])
+    campaign_path(campaign)
+  end
 
   def get_token(params)
     Rails.env.test? ? generate_test_token : params['stripeToken']
