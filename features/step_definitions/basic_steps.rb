@@ -34,13 +34,9 @@ end
 
 And('I fill in the card form') do
     card_no = '4242424242424242'
-    sleep 5
-
     stripe_iframe = find("iframe[name='__privateStripeFrame4']", visible: false)
-    sleep 2
 
     within_frame stripe_iframe do
-        # binding.pry
         find_field('cardnumber').send_keys(card_no)
         find_field('exp-date').send_keys('1221')
         find_field('cvc').send_keys('123')

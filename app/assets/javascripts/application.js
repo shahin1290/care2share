@@ -37,7 +37,7 @@ const initiateStripe = () => {
     card.mount('#card-element');
     // Handle real-time validation errors from the card Element.
     const form = document.getElementById('donate_form');
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', (event) => {
         event.preventDefault();
         stripe.createToken(card).then(result =>{
             stripeTokenHandler(result.token)

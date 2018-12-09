@@ -1,14 +1,15 @@
 = form_with url: donations_path, local: true, id: 'donate_form' do |form|
+    = form.hidden_field :campaign_id, value: @campaign_id
     %p
-        = form.label :enter_your_donation
+        = form.label :amount, 'Enter your donation'
         %br/
         = form.number_field :amount
     %p
-        = form.label :first_name
+        = form.label :firstname, 'First name'
         %br/
         = form.text_field :firstname
     %p
-        = form.label :last_name
+        = form.label :lastname, 'Last name'
         %br/
         = form.text_field :lastname
     %p
@@ -16,7 +17,7 @@
         %br/
         = form.email_field :email
     %p
-        = form.label :postal_code
+        = form.label :postalcode, 'Postal code'
         %br/
         = form.number_field :postalcode
     %p

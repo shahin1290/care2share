@@ -1,25 +1,24 @@
 class DonationsController < ApplicationController
   def new
-    # @car = Automobile.find(params[:automobile_id])
+    @campaign_id = params[:campaign_id]
   end
 
   def create
-    # car = Automobile.find(params[:automobile_id])
     customer = Stripe::Customer.create(
-      email: current_user.email,
+      email: params[:email],
       source: get_token(params),
-      description: [current_user.firstname, current_user.lastname].join(' ')
+      description: [params[:firstname], params[:lastname]].join(' ')
     )
 
     charge = Stripe::Charge.create(
-      customer: customer.id,
-      amount: 100_00,  # how do we change this to the actual amount paid?
+      customer: customer.id, 
+      amount: params[:amount].to_i * 100,
       currency: 'sek',
-      description: 'Donation'
+      description: 'Donation to Care2Share'
     )
 
     if charge[:paid]
-      # increase_amount_raised  ????
+      # increase_amount_raised  ????  # how do we increase the 'total raised' with each donation?
       redirect_to campaign_details, notice: 'Thank you for your donation!'
     else
       redirect_to campaign_details, notice: 'Cheap ass!'
@@ -30,8 +29,8 @@ class DonationsController < ApplicationController
   private
 
   def campaign_details
-    campaign = Campaign.find_by(title: value)
-    return campaign_path(campaign[:id])
+    campaign = Campaign.find(params[:campaign_id])
+    campaign_path(campaign)
   end
 
   def get_token(params)
