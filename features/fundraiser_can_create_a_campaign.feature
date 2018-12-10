@@ -11,7 +11,7 @@ Feature: Create campaign
       And I visit the site
       
     Scenario: Successfully create a campaign when not logged in [Happy Path]
-      Given I click 'Create a Campaign'
+      Given I click 'Start a Campaign'
       And I have logged in
       When I fill in 'Goal' with '1000'
       And I fill in 'Company name' with 'SAAB'
@@ -25,7 +25,7 @@ Feature: Create campaign
 
     Scenario: Successfully create a campaign when logged in [Happy Path]
       Given I have logged in
-      And I click 'Create a Campaign'
+      And I click 'Start a Campaign'
       When I fill in 'Goal' with '1000'
       And I fill in 'Company name' with 'SAAB'
       And I fill in 'Postal code' with '1234'
@@ -38,7 +38,7 @@ Feature: Create campaign
 
     Scenario: Create a campaign when logged in [Sad Path]
       Given I have logged in
-      And I click 'Create a Campaign'
+      And I click 'Start a Campaign'
       When I click 'Create Campaign' 
       Then I should see "Title can't be blank"
       And I should see "Description can't be blank"

@@ -7,7 +7,6 @@
 .campaign_wrapper
   margin-top: 5rem
 
-
 .container
   display: grid
   grid-template-columns: 1fr
@@ -56,15 +55,13 @@
   text-shadow: 0.2px 0.2px #818181
   border: 1px solid transparent
   border-radius: 4px
-  background-color: #00b964
+  background-color: #E08441
   transition: background-color .25s ease-out,color .25s ease-out
-  box-shadow: 0 0.02rem 0.02rem 0.02rem
+  box-shadow: 0 0.01rem 0.01rem 0.005rem
 
 #campaign_button:hover
   background-color: #fff
   color: #00b964
-
-  //     .how_it_works
 
 .campaigns
   grid-row-start: 2
@@ -80,20 +77,32 @@
   display: grid
   grid-template-columns: 1fr 1fr 1fr
   grid-template-rows: 1fr 1fr
+  margin-top: 20px
+  width: 90%
+  height: auto
 
-//     #campaign_link    
+.campaign_img
+  background-image: url("http://cryptoconsulting.info/wp-content/uploads/2018/10/Chairty-cover-image.jpg")
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  background-size: 300px
+  height: 250px
+  font-size: 0px
+  margin-top: -15px
+  margin-right: 20px
 
 .card
-  width: 40%
   float: left
   margin: 6px
+  margin-top: 10px
+  padding-top: 10px
   position: relative
-  z-index: 1
+  line-height: 1.5
   display: block
   background: #FFFFFF
-  min-width: 350px
-  height: 250px
-  // font-family: 'Mukta Vaani', sans-serif
+  max-width: 330px
+  height: 500px
   color: #999999
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.35)
   -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.35)
@@ -105,18 +114,15 @@
   -moz-box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3)
   box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3)
 
+.card_title
+  font-size: 1.5rem
+  text-decoration: none
+  margin-bottom: 5px
+
+.card_amount, .card_story
+  margin-bottom: 5px
+  word-wrap: normal
+
 #placeholder_img
   background-image: url("https://runsignup.files.wordpress.com/2016/12/donationsgraphic.png?w=1400&h=9999")
   background-size: contain
-
-.contact
-  grid-row-start: 3
-  grid-row-end: span 1
-  background-color: #FBF8F6
-
-.contact_info
-  margin-left: 50px
-
-.footer
-  margin-top: 10px
-  text-align: center
