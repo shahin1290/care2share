@@ -1,5 +1,3 @@
-%link{href: "../../assets/stylesheets/campaign_details.sass", rel: "stylesheet"}
-
 .container
     .header_img
     .campaign_title
@@ -11,4 +9,5 @@
         %p= @campaign.amount_raised
     .donate_button
         = link_to 'Donate now', new_donation_path(campaign_id: @campaign.id)
+        
 = render 'partials/navbar'

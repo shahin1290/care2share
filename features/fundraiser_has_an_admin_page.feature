@@ -25,5 +25,5 @@ Feature: Fundraiser has an admin page
         And I should not see 'Help'
     Scenario: Admin can see edit and delete button on his page
         Then I should see 'Edit'
-        Then I should see 'Destroy'
+        Then I should see 'Delete'
   
