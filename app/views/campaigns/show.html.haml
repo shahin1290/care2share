@@ -6,7 +6,7 @@
         %p= @campaign.description
     .campaign_amount_raised
         %p Total raised:
-        %p= @campaign.amount_raised
+        %p= @campaign.amount_raised  
     .donate_button
         = link_to 'Donate now', new_donation_path(campaign_id: @campaign.id)
         

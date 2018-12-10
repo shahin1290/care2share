@@ -14,8 +14,8 @@ Feature: User can see "Total raised" updated when donation successfully submitte
     Scenario: Use can see the amount updated by successful donation
         When I visit the "Brain surgery" site
         Then I should see 'I grew up always helping others.'
-        And I should see '1000'
-        When I click 'donate now'
+        And I should see 1000
+        When I click 'Donate now'
         And I wait 2 seconds
         And I fill in 'Enter your donation' with '7000'
         And I fill in 'First name' with 'Hanna'
@@ -26,4 +26,4 @@ Feature: User can see "Total raised" updated when donation successfully submitte
         And I click 'Submit Payment'
         And I wait 3 seconds
         Then I should see 'Thank you for your donation!'
-        Then I should see '8000'
+        Then I should see 8000

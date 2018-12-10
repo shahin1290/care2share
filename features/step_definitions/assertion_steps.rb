@@ -13,4 +13,7 @@ end
 Then("I should not see {string}") do |content|
     expect(page).to have_no_content content
 end
-  
+
+Then("I should see {int}") do |int|
+    expect(page).to have_no_content int
+end

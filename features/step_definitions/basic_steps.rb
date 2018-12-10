@@ -2,10 +2,6 @@ Given('I click {string}') do |link|
     click_on link
 end
 
-# Given('I click button {string}') do |link|
-#     click_button link
-# end
-
 When('I fill in {string} with {string}') do |field, input|
     fill_in field, with: input
 end
@@ -27,7 +23,7 @@ When('I have logged in') do
         Given I click 'Log in'
         And I fill in 'Email' with 'hanna@random.com'
         And I fill in 'Password' with 'password'
-        And I click 'Log in'
+        And I click 'Log In'
     }
 end
 
