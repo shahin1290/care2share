@@ -2,6 +2,10 @@ Given('I click {string}') do |link|
     click_on link
 end
 
+# Given('I click button {string}') do |link|
+#     click_button link
+# end
+
 When('I fill in {string} with {string}') do |field, input|
     fill_in field, with: input
 end
